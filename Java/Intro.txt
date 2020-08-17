@@ -1,4 +1,4 @@
-MWB Session 5 -> Java Session 1
+Java Session 1
 
 Identifiers
 
