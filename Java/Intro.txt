@@ -1,0 +1,58 @@
+MWB Session 5 -> Java Session 1
+
+Identifiers
+
+Rules
+1. Possible characters
+{ A-Z
+a-z
+0-9
+$, _ }
+ error. 
+2. Identifiers should never be named with a digit (0-9), "9Hello" : this identifier name is Invalid
+3. In Java the identifier names are case sensitive. So that means that Hello and hello are 2 different identifier names. 
+4. Optimal length of the identifier should be between (4 - 15) -> not a strict condition
+5. As usual for any programming language we cannnot use Reserved words as identifier names. For example if you'll name your identifier as 'float', this would throw an error. 
+
+Some valid Identifiers: 'philip', 'PHILIP', 'philip_2'
+The community prefers using Camel Case
+Camel Case example: TodoHelicopterFly
+
+Data Types
+
+Two types of data types: Primitive and Non-Primitive
+
+1. Primitive
+
+Major Classification:
+integer: byte, int, short, long
+floating point: float and double
+character = char
+boolea type = boolean
+
+Sizes:
+a. int (4 bytes = 32 bits)
+b. float (4 bytes = 32 bits)
+c. boolean (1 bit)
+d. char (2 bytes = 16 bits)  
+e. byte (1 byte = 8 bits)
+f. short (2 bytes = 16 bits)
+g. long (8 bytes = 64 bits)
+h. double (8 bytes = 64 bits)
+
+2. Non-Primitive
+
+a. Array 
+An array is a group of like-typed variables that are referred to by a common name. 
+
+b. String
+An array of characters. 
+
+//More on theis in the later sessions.
+
+Goals for Session 6
+1. Setup the environment, if you dont get time to do so!
+2. Memory Map for Java (How actually Java stores the information?, How does the JVM work?)
+3. Learn the remaining Primitive Data Types (class, object and the interface (basic definition))
+4. Java class file
+5. Scope of variables
