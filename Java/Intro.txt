@@ -27,8 +27,8 @@ Two types of data types: Primitive and Non-Primitive
 Major Classification:
 integer: byte, int, short, long
 floating point: float and double
-character = char
-boolea type = boolean
+character: char
+boolea type: boolean
 
 Sizes:
 a. int (4 bytes = 32 bits)
