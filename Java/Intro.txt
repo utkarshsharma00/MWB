@@ -50,7 +50,7 @@ An array of characters.
 
 //More on theis in the later sessions.
 
-Goals for Session 6
+Goals for next session
 1. Setup the environment, if you dont get time to do so!
 2. Memory Map for Java (How actually Java stores the information?, How does the JVM work?)
 3. Learn the remaining Primitive Data Types (class, object and the interface (basic definition))
