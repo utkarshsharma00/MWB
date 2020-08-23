@@ -18,6 +18,9 @@ Some valid Identifiers: 'philip', 'PHILIP', 'philip_2'
 The community prefers using Camel Case
 Camel Case example: TodoHelicopterFly
 
+---------------------------------------------------------------------------------------------------------------------------
+
+
 Data Types
 
 Two types of data types: Primitive and Non-Primitive
@@ -50,9 +53,159 @@ An array of characters.
 
 //More on theis in the later sessions.
 
-Goals for next session
+Goals for next Session: MWB Session 6/Java Session 2
 1. Setup the environment, if you dont get time to do so!
 2. Memory Map for Java (How actually Java stores the information?, How does the JVM work?)
 3. Learn the remaining Primitive Data Types (class, object and the interface (basic definition))
 4. Java class file
 5. Scope of variables
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+Java Session 2
+
+Non-Primitive Data Types (contd.)
+
+3. Class 
+A user-defined blueprint or protoype from which objects are created. It represents the set of properties
+or methods/functions common to all objects of one type. 
+
+class Car{
+    String nameCar; // Toyota Corola
+    float mileageCar; // 13.4 KM/Gallon
+    int seatingCapCar; // 4
+
+    boolean isCarWorking(){
+        System.out.println("Yes/No");
+    }
+} 
+
+4. Object
+It is basic unit of Object Oriented Programming (OOPS) and it represents real life entities.
+What does an "Object" consist of?
+    a. State 
+        It is represented by the attributes of the object. It also reflects the properties of the object. In the programming sense, 
+        the state of an object can be say Invoked, Destroyed (no longer in use) etc. 
+    b. Behaviour
+        It is represented by methods of of an object. It also reflects the response of an object with another objects. 
+    c. Identity
+        It gives a unique name to an object and enables one object to interact with another objects. 
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+
+Scope of Variables in Java
+
+Scope of the variable is the part of the program where the variable is accessible.
+
+1. Member Variables (Class Level Scope)
+   These variables must be defined inside the class. Within the class they can be accessed anywhere. 
+
+   public class Test{
+       int a;
+       private String b;
+
+       void method_1();
+       int method_2();
+
+       //Assuming I write 100 Lines Of Code here
+
+       a.something ?    //Hurray this can be done!
+   }
+
+2. Local Variables (Method/Funtion/Procedure Level Scope)
+   These variables are declared inside a method and simply have method level scope which means these variables cant be accessed
+   outside the method.
+
+   public class Test{
+    int a;
+    private String b;
+
+    void method_1(){
+        int x;
+        char y;
+    }
+
+    x.something ? //This is not possible as x has Local Scope
+
+    int method_2();
+
+    //Assuming I write 100 Lines Of Code here
+
+    a.something;    //Hurray this can be done!
+}
+      
+3. Loop Variables (Block Scope)
+   A variable declared inisde pair of brackets "{" and "}" in a method has scope within brackets only. 
+
+   public class Test{
+       
+       public private static void Main(String args[]) {
+           int x = 10;
+           System.out.println(x); // Why will this statement work?
+       }
+
+       System.out.println(x); // Why wont this work?, How can you make this work? (Possible answer is to declare x in Class Scope)
+   }
+
+   AND
+
+   class Test{
+       public static void main(String args[]) {
+
+           for (int itr = 0; itr < 10; itr++){
+               System.out.println(itr); //This will work
+           }
+           
+           System.out.println(itr); //This wont work
+       }
+   }
+
+   Tricky Questions
+   Q.1
+   class Test{
+       public static void main(String args[]){
+           int a = 5;
+           for (int a = 0; a < 5; a++){
+               System.out.println(a);
+           }
+       }
+   }
+
+   Output ?
+   This wont ouput anything, an error is there. 
+
+   Q.2
+   class Test 
+   {
+       public static void main(String args[]) { 
+            for(int i = 1; i <= 10; i++) 
+            { 
+                System.out.print(i); 
+            } 
+            int i = 20; 
+            System.out.print(i);
+            } 
+   } 
+   
+   Output ?
+   1,2,3,4,5,6,7,8,9,10,20
+
+---------------------------------------------------------------------------------------------------------------------------
+
+
+Classes and Objects (Revisited)
+
+An object is an instance(result) of a class. 
+An object is a real-world entity. 
+An object is a runtime entity. 
+An object is an entity which has a state and a behaviour. 
+
+Now "Runtime"
+
+Goals for the next Session: MWB Session 7/Java Session 3
+1. JVM and the Computer Memory
+2. In depth of Classes, Objects and Methods
+3. Constructors
+4. static keyword
